@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Maze_Puzzle_Generator
 {
@@ -25,6 +12,16 @@ namespace Maze_Puzzle_Generator
         {
             InitializeComponent();
         }
+
+
+        private void GenerateMazeButtonClickHandler(object sender, RoutedEventArgs e)
+        {
+            int totalNumberOfRows = selectedMazeHeight.SelectedIndex * 10 + 10;
+            int totalNumberOfColumns = selectedMazeWidth.SelectedIndex * 10 + 10;
+            DisplayableGridOfMazeCells displayedMazeGrid = new DisplayableGridOfMazeCells(totalNumberOfRows, totalNumberOfColumns);
+            this.Content = displayedMazeGrid;
+        }
+
 
         private void LaunchMSPaintButtonClickHandler(object sender, RoutedEventArgs e)
         {
