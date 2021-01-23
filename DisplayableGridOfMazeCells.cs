@@ -58,7 +58,6 @@ namespace Maze_Puzzle_Generator
         private void AddEntryAndExitPoints()
         {
             MazeCell mazeEntryPoint = mazeCellsQuickReference[1, 0]; // Create an entry point in the upper left corner of the maze.
-            mazeEntryPoint.Background = Brushes.Red;
             mazeEntryPoint.RemoveLeftWall();
             int lastRowIndex = totalNumberOfRows - 1;
             int lastColumnIndex = totalNumberOfColumns - 1;

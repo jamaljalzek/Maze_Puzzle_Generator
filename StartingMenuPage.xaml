@@ -1,0 +1,58 @@
+﻿<Page x:Class="Maze_Puzzle_Generator.StartingMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Maze_Puzzle_Generator"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="LightGray"
+      Title="StartingMenuPage">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25">
+
+        <Label HorizontalAlignment="Center" FontSize="25" Margin="0,0,0,5">Maze Generator</Label>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+
+            <Label Margin="0,0,5,0">Select the height of the maze:</Label>
+
+            <ComboBox Name="SelectedMazeHeight" VerticalAlignment="Center">
+                <ComboBoxItem IsSelected="True">10</ComboBoxItem>
+                <ComboBoxItem>20</ComboBoxItem>
+                <ComboBoxItem>30</ComboBoxItem>
+                <ComboBoxItem>40</ComboBoxItem>
+                <ComboBoxItem>50</ComboBoxItem>
+                <ComboBoxItem>60</ComboBoxItem>
+                <ComboBoxItem>70</ComboBoxItem>
+                <ComboBoxItem>80</ComboBoxItem>
+                <ComboBoxItem>90</ComboBoxItem>
+                <ComboBoxItem>100</ComboBoxItem>
+            </ComboBox>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+
+            <Label Margin="0,0,5,0">Select the width of the maze:</Label>
+
+            <ComboBox Name="SelectedMazeWidth" VerticalAlignment="Center">
+                <ComboBoxItem IsSelected="True">10</ComboBoxItem>
+                <ComboBoxItem>20</ComboBoxItem>
+                <ComboBoxItem>30</ComboBoxItem>
+                <ComboBoxItem>40</ComboBoxItem>
+                <ComboBoxItem>50</ComboBoxItem>
+                <ComboBoxItem>60</ComboBoxItem>
+                <ComboBoxItem>70</ComboBoxItem>
+                <ComboBoxItem>80</ComboBoxItem>
+                <ComboBoxItem>90</ComboBoxItem>
+                <ComboBoxItem>100</ComboBoxItem>
+            </ComboBox>
+
+        </StackPanel>
+
+        <Button Margin="0,5,0,0" Padding="5" HorizontalAlignment="Center" Click="GenerateMazeButtonClickHandler">Generate!</Button>
+
+    </StackPanel>
+
+</Page>
