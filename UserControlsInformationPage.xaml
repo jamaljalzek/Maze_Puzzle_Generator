@@ -1,0 +1,26 @@
+﻿<Page x:Class="Maze_Puzzle_Generator.UserControlsInformationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Maze_Puzzle_Generator"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserControlsInformationPage"
+      Background="LightGray">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="25">
+
+        <Label FontSize="32">Maze movement controls:</Label>
+
+        <Label FontSize="16">To move up once, press W or I once.</Label>
+
+        <Label FontSize="16">To move down once, press S or K once.</Label>
+
+        <Label FontSize="16">To move left once, press A or J once.</Label>
+
+        <Label FontSize="16">To move right once, press D or L once.</Label>
+
+    </StackPanel>
+
+</Page>

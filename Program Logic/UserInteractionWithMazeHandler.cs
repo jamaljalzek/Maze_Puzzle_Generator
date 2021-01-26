@@ -38,7 +38,7 @@ namespace Maze_Puzzle_Generator
             {
                 MazeCell cellAboveCurrentCell = currentCell.GetCellAboveThisCell();
                 if (cellAboveCurrentCell.Background == visitedCellBackgroundColor) // Check if we are going to backtrack.
-                    currentCell.Background = MazeCell.pathColorBrush;
+                    currentCell.Background = MazeCell.unvisitedCellPathColor;
                 else
                     currentCell.Background = visitedCellBackgroundColor;
                 currentCell = cellAboveCurrentCell;
@@ -55,7 +55,7 @@ namespace Maze_Puzzle_Generator
             {
                 MazeCell cellBelowCurrentCell = currentCell.GetCellBelowThisCell();
                 if (cellBelowCurrentCell.Background == visitedCellBackgroundColor) // Check if we are going to backtrack.
-                    currentCell.Background = MazeCell.pathColorBrush;
+                    currentCell.Background = MazeCell.unvisitedCellPathColor;
                 else
                     currentCell.Background = visitedCellBackgroundColor;
                 currentCell = cellBelowCurrentCell;
@@ -72,7 +72,7 @@ namespace Maze_Puzzle_Generator
             {
                 MazeCell cellLeftOfCurrentCell = currentCell.GetCellLeftOfThisCell();
                 if (cellLeftOfCurrentCell.Background == visitedCellBackgroundColor) // Check if we are going to backtrack.
-                    currentCell.Background = MazeCell.pathColorBrush;
+                    currentCell.Background = MazeCell.unvisitedCellPathColor;
                 else
                     currentCell.Background = visitedCellBackgroundColor;
                 currentCell = cellLeftOfCurrentCell;
@@ -89,7 +89,7 @@ namespace Maze_Puzzle_Generator
             {
                 MazeCell cellRightOfCurrentCell = currentCell.GetCellRightOfThisCell();
                 if (cellRightOfCurrentCell.Background == visitedCellBackgroundColor) // Check if we are going to backtrack.
-                    currentCell.Background = MazeCell.pathColorBrush;
+                    currentCell.Background = MazeCell.unvisitedCellPathColor;
                 else
                     currentCell.Background = visitedCellBackgroundColor;
                 currentCell = cellRightOfCurrentCell;

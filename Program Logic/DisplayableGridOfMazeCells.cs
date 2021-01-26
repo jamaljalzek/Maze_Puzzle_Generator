@@ -8,6 +8,7 @@ namespace Maze_Puzzle_Generator
     {
         public static int totalNumberOfRows, totalNumberOfColumns;
         private static MazeCell[,] mazeCellsQuickReference;
+        private static int mazeCellMinimumSizeFactor = 25;
 
 
         public DisplayableGridOfMazeCells(int totalNumberOfRows, int totalNumberOfColumns)
@@ -25,6 +26,8 @@ namespace Maze_Puzzle_Generator
             DisplayableGridOfMazeCells.totalNumberOfRows = totalNumberOfRows;
             DisplayableGridOfMazeCells.totalNumberOfColumns = totalNumberOfColumns;
             mazeCellsQuickReference = new MazeCell[totalNumberOfRows, totalNumberOfColumns];
+            this.MinHeight = totalNumberOfRows * mazeCellMinimumSizeFactor;
+            this.MinWidth = totalNumberOfColumns * mazeCellMinimumSizeFactor;
         }
 
 

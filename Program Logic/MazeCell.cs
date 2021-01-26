@@ -12,8 +12,8 @@ namespace Maze_Puzzle_Generator
         private Thickness thisCellsBorderThickness;
 
         private static double cellBorderThicknessFactor = 1.0;
-        private static SolidColorBrush wallColorBrush = Brushes.Black;
-        public static SolidColorBrush pathColorBrush = Brushes.White;
+        private static Brush wallColor = Brushes.Black;
+        public static Brush unvisitedCellPathColor = Brushes.White;
         private static Random randomNumberGenerator = new Random();
 
 
@@ -24,8 +24,8 @@ namespace Maze_Puzzle_Generator
             hasThisCellBeenVisited = false;
             thisCellsBorderThickness = new Thickness(cellBorderThicknessFactor);
             this.BorderThickness = thisCellsBorderThickness; // Changes directly to this.BorderThickness (such as when we want to update one of its walls) throws a compilation error, even when we explicitly initialize it with a new Thickness, due to this.BorderThickness not having a defult value. So we use thisCellsBorderThickness as a workaround.
-            this.BorderBrush = wallColorBrush;
-            this.Background = pathColorBrush;
+            this.BorderBrush = wallColor;
+            this.Background = unvisitedCellPathColor;
         }
 
 

@@ -16,12 +16,18 @@ namespace Maze_Puzzle_Generator
         {
             InitializeComponent();
             currentDisplayedMazePage = this;
-            DisplayableGridOfMazeCells displayedMazeGrid = new DisplayableGridOfMazeCells(totalNumberOfRows, totalNumberOfColumns);
-            displayedMazeGrid.MinHeight = totalNumberOfRows * 15;
-            displayedMazeGrid.MinWidth = totalNumberOfColumns * 15;
-            MainStackPanel.Children.Insert(0, displayedMazeGrid);
+            DisplayNewRandomlyGeneratedMaze(totalNumberOfRows, totalNumberOfColumns);
             UserInteractionWithMazeHandler.InitializeStartingCell();
             this.Focus(); // We must focus on something in order to fire the KeyDown event to call the Page_KeyDown function.
+            MainWindow.ResizeMainWindowToContent(); // When the user navigates back to the main menu, and chooses a different maze size, we want the MainWindow to resize itself automatically to the new content.
+        }
+
+
+        private void DisplayNewRandomlyGeneratedMaze(int totalNumberOfRows, int totalNumberOfColumns)
+        {
+            DisplayableGridOfMazeCells displayedMazeGrid = new DisplayableGridOfMazeCells(totalNumberOfRows, totalNumberOfColumns);
+            MainGrid.Children.Add(displayedMazeGrid);
+            Grid.SetRow(displayedMazeGrid, 0);
         }
 
 
@@ -33,7 +39,14 @@ namespace Maze_Puzzle_Generator
 
         public static void UpdateDisplayedTotalNumberOfUserMovesMade(int totalNumberOfUserMovesMade)
         {
-            currentDisplayedMazePage.TotalNumberOfUserMovesMade.Content = "Total moves made: " + totalNumberOfUserMovesMade;
+            currentDisplayedMazePage.TotalNumberOfUserMovesMadeLabel.Content = "Moves made: " + totalNumberOfUserMovesMade;
+        }
+
+
+        private void ViewControlsButtonClickHandler(object sender, System.Windows.RoutedEventArgs e)
+        {
+            UserControlsInformationPage userControlsInformationPage = new UserControlsInformationPage();
+            this.NavigationService.Navigate(userControlsInformationPage);
         }
     }
 }

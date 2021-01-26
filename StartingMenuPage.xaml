@@ -9,15 +9,15 @@
       Background="LightGray"
       Title="StartingMenuPage">
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="25">
 
-        <Label HorizontalAlignment="Center" FontSize="25" Margin="0,0,0,5">Maze Generator</Label>
+        <Label HorizontalAlignment="Center" FontSize="32" Margin="0,0,0,5">Maze Generator</Label>
 
         <StackPanel Orientation="Horizontal" Margin="5">
 
-            <Label Margin="0,0,5,0">Select the height of the maze:</Label>
+            <Label FontSize="16" Margin="0,0,5,0">Select the height of the maze:</Label>
 
-            <ComboBox Name="SelectedMazeHeight" VerticalAlignment="Center">
+            <ComboBox Name="SelectedMazeHeight" VerticalAlignment="Center" FontSize="16">
                 <ComboBoxItem IsSelected="True">10</ComboBoxItem>
                 <ComboBoxItem>20</ComboBoxItem>
                 <ComboBoxItem>30</ComboBoxItem>
@@ -34,9 +34,9 @@
 
         <StackPanel Orientation="Horizontal" Margin="5">
 
-            <Label Margin="0,0,5,0">Select the width of the maze:</Label>
+            <Label FontSize="16" Margin="0,0,5,0">Select the width of the maze:</Label>
 
-            <ComboBox Name="SelectedMazeWidth" VerticalAlignment="Center">
+            <ComboBox Name="SelectedMazeWidth" VerticalAlignment="Center" FontSize="16">
                 <ComboBoxItem IsSelected="True">10</ComboBoxItem>
                 <ComboBoxItem>20</ComboBoxItem>
                 <ComboBoxItem>30</ComboBoxItem>
@@ -51,7 +51,7 @@
 
         </StackPanel>
 
-        <Button Margin="0,5,0,0" Padding="5" HorizontalAlignment="Center" Click="GenerateMazeButtonClickHandler">Generate!</Button>
+        <Button FontSize="16" Margin="0,5,0,0" Padding="5" HorizontalAlignment="Center" Click="GenerateMazeButtonClickHandler">Generate!</Button>
 
     </StackPanel>
 

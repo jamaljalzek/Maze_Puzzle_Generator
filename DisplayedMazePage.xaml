@@ -6,17 +6,33 @@
       xmlns:local="clr-namespace:Maze_Puzzle_Generator"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Background="LightGray"
       Title="DisplayedMazePage"
+      Background="LightGray"
       Focusable="True"
       KeyDown="Page_KeyDown">
 
-    <StackPanel Name="MainStackPanel" Orientation="Vertical" Margin="25">
+    <Grid Name="MainGrid" Margin="25">
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition> <!-- We want the bottom row with the button and label to take up the minimal amount of vertical space, even when the window size is increased. -->
+        </Grid.RowDefinitions>
 
         <!-- The displayed maze grid will be added here via code in DisplayedMazePage.xaml.cs. -->
 
-        <Label Name="TotalNumberOfUserMovesMade" Margin="0,10,0,0" HorizontalAlignment="Center">Total moves made: 0</Label>
+        <Grid Grid.Row="1" Margin="0,25,0,0">
 
-    </StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" FontSize="16" Padding="5" HorizontalAlignment="Center" Click="ViewControlsButtonClickHandler">View controls</Button>
+
+            <Label Name="TotalNumberOfUserMovesMadeLabel" Grid.Column="1" FontSize="16" HorizontalAlignment="Center">Moves made: 0</Label>
+
+        </Grid>
+
+    </Grid>
 
 </Page>
